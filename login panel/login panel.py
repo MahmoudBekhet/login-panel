@@ -57,7 +57,7 @@ def is_email_exist(x):
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi(r'D:\programming\python\programs\projects\green system\ui\main\main.ui', self)
+        uic.loadUi(r'ui\main\main.ui', self)
 
 
 
@@ -65,7 +65,7 @@ class login_screen(qtw.QWidget):
     login_successful = QtCore.pyqtSignal()
     def __init__ (self):
         super().__init__()
-        uic.loadUi(r'D:\programming\python\programs\projects\green system\ui\login\login.ui', self)
+        uic.loadUi(r'ui\login\login.ui', self)
         
         self.login_button.clicked.connect(self.login)
         self.open_register_button.clicked.connect(self.open_register_screen)
@@ -150,7 +150,7 @@ class register_screen(qtw.QDialog):
     
     def __init__(self):
         super().__init__()
-        uic.loadUi(r'D:\programming\python\programs\projects\green system\ui\login\register.ui', self)
+        uic.loadUi(r'ui\login\register.ui', self)
         
         self.back.clicked.connect(self.back_to_login)
         self.register_button.clicked.connect(self.add_data)
